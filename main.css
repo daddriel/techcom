@@ -198,6 +198,11 @@ body {
   color: var(--color-text);
 }
 
+.tc-footer .container {
+  display: flex !important;
+  justify-content: center !important;
+}
+
 .tc-footer .tc-footer__contact {
   padding: 10px 0;
 
@@ -214,13 +219,14 @@ body {
 }
 
 @media (max-width: 768px) {
+
   body {
     display: block;
     height: auto;
   }
 
   .tc-hero {
-    padding: 100px 0 70px 0;
+    flex-direction: column;
   }
 
   .tc-hero .tc-hero__text {

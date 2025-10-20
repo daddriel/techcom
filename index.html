@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="tc-header">
+    <div class="container">
+      <img src="./logo.png" alt="Logo ">
+    </div>
+  </header>
+  <section class="tc-hero">
+    <div class="container">
+      <div class="tc-hero__text">
+        <h2>Estamos en mantenimiento</h2>
+        <p>Volveremos pronto!</p>
+        <img class="img-mobile" src="./maintenance.png" alt="Hero Image">
+        <div class="form-contact">
+
+          <p>
+            ¿Quieres ponerte en contacto con nosotros? Completa el formulario a continuación y nos pondremos en
+            contacto contigo lo antes posible.
+          </p>
+          <!-- Form action API Endpoint  -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="0426305b-319d-48da-b743-49b70aca95f7">
+            <!-- Add your form fields here -->
+            <div class="form-core">
+              <div class="form-field ">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" required>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="message">Mensaje</label>
+                <textarea name="message" required rows="5"></textarea>
+              </div>
+            </div>
+            <button type="submit">Enviar</button>
+
+          </form>
+        </div>
+
+      </div>
+
+      <div class="tc-hero__image">
+        <img src="./maintenance.png" alt="Hero Image">
+      </div>
+    </div>
+  </section>
+  <footer class="tc-footer">
+    <div class="container">
+      <!-- mail whatsapp contact -->
+      <div class="tc-footer__contact">
+        <a href="mailto:jaime.torrico@techcom.com">jaime.torrico@techcom.com</a>
+        <a href="https://wa.me/+591 72610599" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <div class="container">
+      <p>© 2025 TechCom. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

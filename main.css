@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* normalize basic rulers */
+
+/* set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* variable colors */
+
+:root {
+  --color-primary: #1954ed;
+  --color-background: #121b1d;
+  --color-text: #ccdeff;
+  --color-accent: #CCFF00;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tc-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.tc-header img {
+  width: 200px;
+  height: auto;
+}
+
+.tc-hero {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tc-hero::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  background-image: url('./bg-blur.png');
+  fill: rgba(204, 255, 0, 0.45);
+  filter: blur(165.5px);
+  width: 384px;
+  height: 399px;
+  z-index: 0;
+}
+
+.tc-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transform: rotate(180deg);
+  background-image: url('./bg-blur.png');
+  fill: rgba(204, 255, 0, 0.45);
+  filter: blur(165.5px);
+  width: 384px;
+  height: 399px;
+  z-index: 0;
+}
+
+.tc-hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.tc-hero .tc-hero__text,
+.tc-hero .tc-hero__image {
+  max-width: 49.98%;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.tc-hero .tc-hero__text {
+  text-align: left;
+}
+
+.tc-hero .tc-hero__text h2 {
+  font-size: 65px;
+  color: var(--color-accent);
+  line-height: 0.8em;
+  padding-bottom: 20px;
+}
+
+.tc-hero .tc-hero__text p {
+  font-size: 30px;
+  padding-bottom: 30px;
+  line-height: 1.1em;
+}
+
+.tc-hero .tc-hero__text .form-contact p {
+  font-size: 18px;
+  padding-bottom: 20px;
+
+}
+
+.tc-hero .tc-hero__image img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.form-contact label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+
+.form-contact .form-core {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.form-contact .form-field input,
+.form-contact .form-field textarea {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-text);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-family: 'Jost', sans-serif;
+}
+
+.form-contact .form-field--full {
+  grid-column: span 2;
+}
+
+.form-contact button {
+  padding: 12px 30px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-contact button:hover {
+  background-color: var(--color-text);
+  color: var(--color-primary);
+}
+
+.tc-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.tc-footer .tc-footer__contact {
+  padding: 10px 0;
+
+}
+
+.tc-footer .tc-footer__contact a {
+  color: var(--color-accent);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: auto;
+  }
+
+  .tc-hero {
+    padding: 100px 0 70px 0;
+  }
+
+  .tc-hero .tc-hero__text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tc-hero .tc-hero__text h2 {
+    font-size: 45px;
+  }
+
+  .tc-hero .tc-hero__text p {
+    font-size: 20px;
+  }
+
+  .tc-hero .tc-hero__text .form-contact p {
+    font-size: 14px;
+    padding-bottom: 14px;
+
+  }
+
+
+  .tc-hero__image {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .tc-footer {
+    background-color: var(--color-background);
+    position: relative;
+  }
+
+  form label {
+    text-align: left !important;
+    font-size: 14px;
+  }
+
+  .form-contact .form-field input,
+  .form-contact .form-field textarea {
+    font-size: 14px;
+  }
+
+  .tc-header {
+    background-color: var(--color-background);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .tc-header img {
+    width: 150px;
+  }
+
+
+}

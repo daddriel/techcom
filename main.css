@@ -74,6 +74,7 @@ body {
   width: 384px;
   height: 399px;
   z-index: 0;
+  pointer-events: none;
 }
 
 .tc-hero::after {
@@ -88,6 +89,7 @@ body {
   width: 384px;
   height: 399px;
   z-index: 0;
+  pointer-events: none;
 }
 
 .tc-hero>.container {
@@ -219,6 +221,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .tc-hero>.container {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 
   body {
     display: block;
@@ -285,6 +291,19 @@ body {
   .tc-header img {
     width: 150px;
   }
+}
 
+@media (max-width: 480px) {
+  .form-contact .form-core {
+    grid-template-columns: 1fr;
+  }
 
+  .form-contact .form-field--full {
+    grid-column: span 1;
+  }
+
+  .img-mobile {
+    max-width: 250px;
+
+  }
 }

@@ -220,7 +220,35 @@ body {
   display: none;
 }
 
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.carousel img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .carousel img {
+    max-width: 100px;
+  }
+}
+
+
 @media (max-width: 768px) {
+  .carousel {
+    justify-content: center;
+  }
+
   .tc-hero>.container {
     padding-top: 100px;
     padding-bottom: 60px;
@@ -303,7 +331,7 @@ body {
   }
 
   .img-mobile {
-    max-width: 250px;
+    max-width: 200px;
 
   }
 }
